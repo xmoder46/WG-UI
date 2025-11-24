@@ -370,6 +370,9 @@ function detect_os(){
     elif grep -q "impish" /etc/os-release; then
       msg info "OS detected : Ubuntu Impish (21.10)"
       main
+    elif grep -q "jammy" /etc/os-release; then
+      msg info "OS detected : Ubuntu Jammy (22.04)"
+      main
     else
       if $CONTINUE_ON_UNDETECTED_OS; then
         msg warn "Unable to detect os. Keep going anyway in 5s"
